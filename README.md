@@ -13,6 +13,9 @@ cd cyberwamuser && python3 -m venv venv && ./venv/bin/pip install -r requirement
 ```
 
 ## Запуск утилиты
+При первом запуске утилиты будет создана директория для конфигов и необходимых данных, туда будет скопированы заголовке для генерации user-agent и т.д. Путь конфигов:  
+~/.config/cyberwamuser/  
+
 Активируем окружение
 ```sh
 source venv/bin/activate

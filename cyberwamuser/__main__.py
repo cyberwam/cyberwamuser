@@ -12,6 +12,8 @@ def parse_params() ->str:
             return username
         elif '--social-list' in params[1]:
             sys.exit('Будет выведен список сервисов')
+        else:
+            helper()
     else:
         helper()
 
