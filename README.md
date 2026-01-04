@@ -56,3 +56,10 @@ podman run --rm -it cyberwam
 ```sh
 podman run -it --name cyber_1 cyberwam
 ```
+
+## Локальная установка
+Вместо локальной установки для себя я не стал заморачиваться. Добавил alias в конфиг fish, Вы может поступить аналогично или самостоятельно составить pyproject.toml или что-то в этом духе. Покажу, как выглядит мой alias(в директорию ~/project клонировал репозиторий для теста)
+```sh
+# ~/.config/fish/config.fish
+alias cyberwamuser_="/home/max/project/cyberwamuser/venv/bin/python3 /home/max/project/cyberwamuser/cyberwamuser/__main__.py"
+```
