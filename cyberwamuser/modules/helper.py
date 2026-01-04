@@ -9,6 +9,12 @@ def helper():
     
     cyberwamuser:
     --user <string>         Поиск по никнейму
+                            Пример использования:
+                            {GREEN}cyberwamuser --user test_username{RESET}
+
+    --social-list           Вывод списка социальных сетей/сервисов
+                            Пример использования:
+                            {GREEN}cyberwamuser --social-list{RESET}
     """
 
     text = textwrap.dedent(text)

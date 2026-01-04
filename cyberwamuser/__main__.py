@@ -10,8 +10,8 @@ def parse_params() ->str:
             username = params[2]
             print(f'user: {username}')
             return username
-        elif '--list-service' in params[1]:
-            helper()
+        elif '--social-list' in params[1]:
+            sys.exit('Будет выведен список сервисов')
     else:
         helper()
 

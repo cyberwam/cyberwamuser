@@ -26,5 +26,6 @@ def init_tool():
     if os.path.exists(agent_path):
         shutil.move(agent_path, f'{config_dir_path}/{agent}')
         print(f'Move {agent_path} -> {config_dir_path}/{agent}')
-        os.removedirs(f'{agent_path.split('/')[0]}')
+        # Удаляем временную директорию для хранения стартовой инфы
+        #os.removedirs(f'{agent_path.split('/')[0]}')
     
