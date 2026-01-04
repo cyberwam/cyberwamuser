@@ -1,0 +1,13 @@
+[project]
+name = "cyberwamuser"
+version = "0.0.1"
+
+[build-system]
+requires = ["setuptools", "requests"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+cyberwamuser = 'cyberwamuser.__main__:main'
+
+[tools.setuptools.packages.find]
+where = [.]

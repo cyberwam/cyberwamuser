@@ -28,10 +28,10 @@ def init_tool():
 
     if os.path.exists(agent_path):
         shutil.copy(agent_path, f'{config_dir_path}/{agent}')
-        print(f'Copy {agent_path} -> {config_dir_path}/{agent}')
+        #print(f'Copy {agent_path} -> {config_dir_path}/{agent}')
     if os.path.exists(service_path):
         shutil.copy(service_path, f'{config_dir_path}/{SERVICE_CONF}')
-        print(f'Copy {service_path} -> {config_dir_path}/{SERVICE_CONF}')
+        #print(f'Copy {service_path} -> {config_dir_path}/{SERVICE_CONF}')
         # Удаляем временную директорию для хранения стартовой инфы
         #os.removedirs(f'{agent_path.split('/')[0]}')
     
@@ -43,7 +43,7 @@ def get_social_list() -> list[dict[str]]:
     with open(social_service_path, 'r') as file:
         for line in file.readlines():
             line = line.strip()
-            service_name, service_url = line.split('\t')
+            service_name, service_url = line.split(' = ')
             data = {'service':service_name, 'url':service_url}
             full_list_service.append(data)
     

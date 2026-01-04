@@ -1,5 +1,4 @@
 import requests, json, random, os
-from bs4 import BeautifulSoup
 from modules.core import get_config_path
 
 config_dir_path = f'{get_config_path()}/cyberwamuser/'

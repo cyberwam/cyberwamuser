@@ -1,5 +1,4 @@
 import requests
-from bs4 import BeautifulSoup
 from modules.header import header
 
 def parser_result(url:str) -> str:
@@ -12,4 +11,6 @@ def parser_result(url:str) -> str:
             status = True
         return status
     except Exception as err:
+        if 'SSLCertVerificationError' in str(err):
+            return False
         return err

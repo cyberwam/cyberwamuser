@@ -56,4 +56,9 @@ def main():
     
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(f'{RED}Exit...{RESET}')
+    except Exception as err:
+        print(err)
