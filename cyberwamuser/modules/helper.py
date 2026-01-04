@@ -8,9 +8,13 @@ def helper():
     Version:    {BOLD}{__version__}{RESET}
     
     cyberwamuser:
-    --user <string>         Поиск по никнейму
+    --user <username>       Поиск по никнейму
                             Пример использования:
                             {GREEN}cyberwamuser --user test_username{RESET}
+
+    --url <test url>        Тестирование ответа сервиса. 
+                            Пример использования:
+                            {GREEN}cyberwamuser --url https://habr.com/ru/users/skfkdf/{RESET}
 
     --social-list           Вывод списка социальных сетей/сервисов
                             Пример использования:
