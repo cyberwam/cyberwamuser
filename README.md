@@ -26,3 +26,18 @@ source venv/bin/activate
 ```sh
 python3 cyberwamuser
 ```
+
+## Запуск в контейнере Podman
+Базовый образ основан на archlinux. Он более тяжеловесный, чем ubuntu, но при установки утилит в убунту - в любом случае раздуется до таких же +/- размеров, поэтому не идем по пути наименьшего сопротивления, использую archlinux и его пакетный менеджер  
+Соберем образ
+```sh
+podman build -t cyberwam -f Containerfile
+```
+Запустим с последуюзим удаление контейнера
+```sh
+podman run --rm -it cyberwam
+```
+Если нужно будет работать в том же контейнере
+```sh
+podman run -it --name cyber_1 cyberwam
+```
